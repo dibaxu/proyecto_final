@@ -22,7 +22,8 @@
     "noticias"
     "footer"
     ; */
-    
+    display: flex;
+    flex-flow: column;
     justify-content: stretch;
 }
 
@@ -279,9 +280,10 @@ footer {
     background-color: #EFF5F5;
     border-top: 3px solid #00425A;
     display: flex;
-    justify-content: space-evenly;
-    align-items: top;
-    padding: 1rem;
+    justify-content: space-around;
+    
+    padding: 1rem 0;    
+    
 }
 .footer_text{
     color: #000;
@@ -291,9 +293,22 @@ footer {
     font-style: normal;
     font-weight: 300;
     line-height: normal;
-    
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
     list-style-type: none;    
+}
+.redes{
+    margin-left: 16px;       
+}
+.redes>ul{
+    text-align: left;
+    padding: 0;
+}
+.contacto {
+    margin-right: 16px;     
+}
+.contacto>ul{
+    text-align: right;
+    padding: 0;
 }
