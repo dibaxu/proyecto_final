@@ -39,6 +39,9 @@ header {
     height: fit-content;
     
 }
+nav{
+    border-bottom: 2px solid #FC7300;
+}
 .menu {
     display: flex;
     flex-direction: column;
@@ -77,6 +80,7 @@ a:link{
 }
 a:visited{
     color: #000;
+    
 }
 a:hover{
     color: #FC7300;
@@ -85,17 +89,20 @@ a:hover{
 .logo{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
     border-radius: 40px;
     border: 2px solid #00425A;
-    width: 90%;
-    margin: 30px auto 30px auto;
+    width: fit-content;
+    margin: 30px auto 30px auto;   
+}
+.logo h1{
     color: #00425A;
     font-family: Poppins;
     font-size: 48px;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
+    padding: 4px 16px;
 }
 
 /* MAIN - SECCIONES */
@@ -117,6 +124,7 @@ main{
     padding-left: 1rem;
     padding-right: 1rem;
     text-align: center;
+    display: block;
 }
 .text{
     color: #EFF5F5;
@@ -131,6 +139,10 @@ main{
     border-radius: 50px;
     width: 90%;
 }
+.hidden_elements{
+    display: none;
+}
+
 
 /* intro */
 .intro {
@@ -167,7 +179,14 @@ main{
     padding: 20px 16px;
     gap: 16px;              
 }
-.somos>img {
+.cont-somos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    gap: 16px;
+}
+.cont-somos>img {
     /* max-height:min-content; */
     border-radius: 40px 40px 40px 0px;
 }
@@ -194,6 +213,11 @@ main{
     padding: 20px 16px;
     gap: 16px;
 }
+.plan-text-img{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
 .plan_photos{
     display: flex;    
     justify-content: space-between;
@@ -201,8 +225,8 @@ main{
 
 .circular_ph{    
     /* no sé como hacer para recortar un segmento de la imagen y me queden cuadradas, orginalmente son rect */
-    width: 150px;
-    height: 150px;
+    width: 40%;
+    height: auto;
     border-radius: 50%;        
 }
 
@@ -215,6 +239,11 @@ main{
     padding: 20px 0;
     gap: 16px;
     justify-content: center;    
+}
+.noticias a:hover{
+    box-shadow: 4px 8px 2px  #FC7300;
+    transition: 0.5s;
+
 }
 .notica {
     display: flex;
@@ -342,7 +371,9 @@ footer {
 footer ul>li:first-of-type{
     font-weight: 500;
 }
-
+footer li>a:hover{
+    color: #FC7300;
+}
 .redes{
     margin-left: 16px;       
 }
@@ -361,4 +392,279 @@ footer ul>li:first-of-type{
     border: 1px solid #00425A;
     border-radius: 15px;
     padding: 3px 5px;
+    text-align: center;
+    /* width: 50%; */
+}
+.logo-maps{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    /* align-items: center; */
+}
+
+.maps{
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+footer iframe{
+    width: 100%; 
+    height: min-content;
+    margin: 0;
+    border: none;
+    
+    /* frameborder: 0;
+    scrolling: no;
+    marginheight: 0;
+    marginwidth: 0; */
+}
+
+/* KEYFRAMES */
+.scale-in-hor-center {
+	-webkit-animation: scale-in-hor-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-hor-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+ @-webkit-keyframes scale-in-hor-center {
+    0% {
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in-hor-center {
+    0% {
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+  
+  
+
+@media (min-width: 768px) {
+  
+    /* CSS */
+
+    /* HEADER */
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+    list-style-position: outside;
+    /* padding: 0;   */
+    gap: 0.5em;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal; 
+} 
+
+.menu>li:nth-child(2){
+    margin-top: 0;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    text-align: center;
+    border: 2px solid #00425A;
+    width: fit-content;  
+}
+.logo h1{
+    padding: 4px 16px ;
+}
+nav{
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+/* MAIN */
+main {
+    flex-direction: row;
+}
+.photo{
+    border-radius: 50px;
+    width: 50%;
+}
+
+
+/*  INTRO */
+.intro{
+    flex-direction: row;   
+    
+}
+#introduccion {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+}
+#clase {
+    margin-right: 16px;
+}
+
+/* SOMOS */
+.cont-somos{
+    flex-direction: row-reverse;
+    
+}
+.somos p{
+    width: 50%;
+    margin-right: 16px;
+   
+}
+.somos img{
+    margin-left: 16px;    
+}
+/* ELEGIRNOS */
+.elegirnos{
+    padding: 20px 32px;
+}
+
+.hidden_elements{
+    display: flex;
+    justify-content: space-between;
+}
+.hidden_elements img{
+    width: 30%;
+    height: auto;    
+}
+.hidden_elements img:first-of-type{
+    border-radius: 0px 40px 40px 40px;
+    border-left: 3px solid #FC7300;
+}
+.hidden_elements img:nth-child(2){
+    border-radius: 40px;
+    border-top: 3px solid #FC7300;
+    border-bottom: 3px solid #FC7300;
+}
+.hidden_elements img:last-of-type{
+    border-radius: 40px 40px 0px 40px;
+    border-right: 3px solid #FC7300;
+}
+/* PLAN EDUCATIVO */
+.plan{
+    padding: 20px 32px;
+}
+.plan-text-img{
+    flex-direction: row;
+}
+.plan-text-img>div:first-of-type{
+    width: 50%;
+}
+.plan_photos{
+    flex-direction: column;
+    width: 50%;
+    justify-content: space-between;
+    align-items: end;
+}
+.circular_ph{
+    width: 50%;
+}
+/* NOTICIAS */
+.noticias{
+    padding: 20px 32px;
+}
+.not-par-1, .not-par-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 16px;
+}
+
+.logo-maps{
+    align-items: center;
+}
+
+.logo_footer{
+    width: fit-content;
+}
+
+}
+
+@media (min-width: 1025px)  {
+  
+    /* CSS */
+nav{
+    padding-left: 160px;
+    padding-right: 160px;
+}  
+.logo{
+    margin-top: 56px;
+}  
+
+/*  INTRO */
+.intro{
+    padding-right: 160px;
+    padding-left: 160px;
+}
+#introduccion {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;   
+}
+#clase {
+    margin-right: 0;
+}
+
+/* SOMOS */
+.somos{
+    padding-right: 160px;
+    padding-left: 160px;    
+}
+.cont-somos{
+    gap: 32px;
+}
+.somos p{
+    width: 50%;
+    margin-right: 0;
+    background-color: #1F8A70;
+    padding: 24px;
+    border-radius: 40px;
+   
+}
+.somos img{
+    margin-left: 0;
+    height: 625px;
+    width: auto;   
+}
+/* ELEGIRNOS */
+.elegirnos{
+    padding: 20px 160px;
+}
+
+.plan{
+    padding: 20px 160px;
+}
+
+.noticias{
+    padding: 20px 160px;
+}
+footer{
+    padding-left: 160px;
+    padding-right: 160px;
+}
+.redes{
+    margin-left: 0;
+}
+.contacto{
+    margin-right: 0;
+}
+
 }
