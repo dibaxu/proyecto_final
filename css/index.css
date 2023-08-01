@@ -1,0 +1,835 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+/* CONTAINER Y GRAL */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 100%;
+    /* display: grid;    
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-area: 
+    "header"
+    "intro"
+    "somos"
+    "elergirnos"
+    "plan"
+    "noticias"
+    "footer"
+    ; */
+    display: flex;
+    flex-flow: column;
+    justify-content: stretch;
+}
+
+/* HEADER - NAV - LOGO */
+
+
+
+header {
+    grid-area: header;
+    background-color: #EFF5F5;
+    /* background-image: url(./img/background_header.svg);
+    background-size: cover;  */
+    height: fit-content;
+    
+}
+nav{
+    border-bottom: 2px solid #FC7300;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    list-style-position: outside;
+    padding: 0;  
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal; 
+}
+.menu:first-child{
+    margin-top: 30px;
+}
+.menu>li:nth-child(2){
+    margin-top: 20px;
+}
+
+.menu>a{
+    display: block;
+    /* width: calc(100% + 20px);     */
+    /* text-decoration: none;
+    color: #000; */    
+}
+a{
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+a:link{
+    text-decoration: none;
+    color: #000;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+a:visited{
+    color: #000;
+    
+}
+a:hover{
+    color: #FC7300;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    border-radius: 40px;
+    border: 2px solid #00425A;
+    width: fit-content;
+    margin: 30px auto 30px auto;   
+}
+.logo h1{
+    color: #00425A;
+    font-family: Poppins;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    padding: 4px 16px;
+}
+
+/* MAIN - SECCIONES */
+main{
+    /* width: 100vw; */
+    display: flex;
+    flex-flow: column wrap;
+    /* flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+.section_header{
+    color: #EFF5F5;
+    font-family: Poppins;
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+    display: block;
+}
+.text{
+    color: #EFF5F5;
+    text-align: left;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+.photo{
+    border-radius: 50px;
+    width: 90%;
+}
+.hidden_elements{
+    display: none;
+}
+
+
+/* intro */
+.intro {
+    grid-area: intro;
+    padding: 20px 16px;
+    gap: 16px;
+    background-color: #EFF5F5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#introduccion{
+    padding: 16px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 40px 0px 40px 40px;
+    background: #00425A;
+    text-align: center;
+}
+#clase{
+    /* width: calc(100vw - 32px); */
+    border-radius: 0px 50px;
+}
+
+/* quienes somos */
+.somos {
+    grid-area: somos;
+    background: #00425A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 16px;
+    gap: 16px;              
+}
+.cont-somos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    gap: 16px;
+}
+.cont-somos>img {
+    /* max-height:min-content; */
+    border-radius: 40px 40px 40px 0px;
+}
+
+/* por que elegirnos */
+.elegirnos {
+    grid-area: elegirnos;
+    display: flex;
+    background-color: #1F8A70;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 16px;
+    gap: 16px;
+
+}
+
+/* plan educativo */
+.plan{
+    grid-area: plan;
+    background-color: #181823;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 16px;
+    gap: 16px;
+}
+.plan-text-img{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.plan_photos{
+    display: flex;    
+    justify-content: space-between;
+}
+
+.circular_ph{    
+    /* no sé como hacer para recortar un segmento de la imagen y me queden cuadradas, orginalmente son rect */
+    width: 40%;
+    height: auto;
+    border-radius: 50%;        
+}
+
+/* noticias */
+.noticias {
+    grid-area: noticias;
+    background-color: #00425A;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 16px;
+    justify-content: center;    
+}
+.noticias a:hover{
+    box-shadow: 4px 8px 2px  #FC7300;
+    transition: 0.5s;
+
+}
+.notica {
+    display: flex;
+    justify-self: center;
+    align-content: end; 
+    width: 90%;
+    height: 128px;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    border-radius: 20px;
+    margin-right: auto;
+    margin-left: auto;  
+}
+.text_news {
+    color: #EFF5F5;           
+    text-align: center;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal; 
+    position: relative;
+    z-index: 10; 
+    padding: 10px 16px;
+      
+}
+.img-container{
+    object-fit: contain;
+    /* position: absolute; */
+    left: 16px;
+    z-index: 1;
+    width: 90%;
+    height: 128px;    
+    border-radius: 20px;
+    overflow: hidden;
+    filter: brightness(0.5) grayscale(0.2);
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.article-img{
+    width: 100%;
+}
+/* #new_york_times{
+    width: 90%;
+    height: 128px;
+    background-image: url(./img/img_new_york_times.webp);    
+    background-repeat: no-repeat;
+    background-size: cover;    
+    
+    border-radius: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px 16px;
+    display: flex;
+    align-items: end;
+}
+#fundacion_rockefeller{
+    width: 90%;
+    height: 128px;
+    background-image: url(./img/img_fundacion_rockefeller.webp);    
+    background-repeat: no-repeat;
+    background-size: cover;    
+    
+    border-radius: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px 16px;
+    display: flex;
+    align-items: end; 
+}
+#innovate_america{
+    width: 90%;
+    height: 128px;
+    background-image: url(./img/img_innovate_america.webp);    
+    background-repeat: no-repeat;
+    background-size: cover;    
+    
+    border-radius: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px 16px;
+    display: flex;
+    align-items: end; 
+}
+#education_week{
+    width: 90%;
+    height: 128px;
+    background-image: url(./img/img_education_week.webp);    
+    background-repeat: no-repeat;
+    background-size: cover;    
+    
+    border-radius: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px 16px;
+    display: flex;
+    align-items: end; 
+} */
+
+/* footer */
+footer {
+    grid-area: footer;    
+    background-color: #EFF5F5;
+    border-top: 3px solid #FC7300;
+    display: flex;
+    justify-content: space-around;
+    
+    padding: 1rem 0;    
+    
+}
+.footer_text{
+    color: #FC7300;
+    text-align: left;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    list-style-type: none;    
+}
+footer ul>li:first-of-type{
+    font-weight: 500;
+}
+footer li>a:hover{
+    color: #FC7300;
+}
+.redes{
+    margin-left: 16px;       
+}
+.redes>ul{
+    text-align: left;
+    padding: 0;
+}
+.contacto {
+    margin-right: 16px;     
+}
+.contacto>ul{
+    text-align: right;
+    padding: 0;
+}
+.logo_footer{
+    border: 1px solid #00425A;
+    border-radius: 15px;
+    padding: 3px 5px;
+    text-align: center;
+    /* width: 50%; */
+}
+.logo-maps{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    /* align-items: center; */
+}
+
+.maps{
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+footer iframe{
+    width: 100%; 
+    height: min-content;
+    margin: 0;
+    border: none;
+    
+    /* frameborder: 0;
+    scrolling: no;
+    marginheight: 0;
+    marginwidth: 0; */
+}
+
+/* FORMULARIO */
+.formcarry-container {
+    box-sizing: border-box;
+    margin: 40px auto 0 auto;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+
+    width: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
+
+    /* NORMAL */
+    --fc-border-color: #000;
+    --fc-normal-text-color: #1F8A70;
+    --fc-normal-placeholder-color: #B3B8D0;
+
+    /* PRIMARY COLOR | HSL FORMAT*/
+    --fc-primary-color-hue: 27;
+    --fc-error-color-hue: 356;
+    --fc-primary-hsl: var(--fc-primary-color-hue), 100%, 49%;
+    --fc-error-hsl: var(--fc-error-color-hue), 100%, 54%;
+
+    /* HOVER */
+    --fc-field-hover-bg-color: #F7F9FC;
+    --fc-border-hover-color: #DDE0EE;
+    --fc-field-hover-text-color: #B3B8D0;
+
+    --fc-border-active-color: #FC7300;
+  }
+
+  .formcarry-container * {
+    box-sizing: border-box;
+  }
+
+  .formcarry-container label {
+    display: block;
+    cursor: pointer;
+  }
+
+  .formcarry-container .formcarry-block:not(:first-child) {
+    margin-top: 16px;
+  }
+
+  /*=============================================
+  =            Fields           =
+  =============================================*/
+  
+  .formcarry-container input,
+  .formcarry-container textarea,
+  .formcarry-container select {
+    margin-top: 4px;
+    width: 100%;
+    height: 42px;
+    border: 1px solid var(--fc-border-color);
+    color: var(--fc-normal-text-color);
+    border-radius: 6px;
+    padding: 8px 12px;
+    
+    font-family: "Inter", sans-serif;
+    font-size:14px;
+    transition: 125ms background, 125ms color, 125ms box-shadow;
+  }
+
+  .formcarry-container textarea{
+    min-height: 188px;
+    max-width: 100%;
+    padding-top: 12px;
+  }
+
+  .formcarry-container input::placeholder,
+  .formcarry-container textarea::placeholder,
+  .formcarry-container select::placeholder {
+    color: var(--fc-normal-placeholder-color);
+  }
+
+  .formcarry-container input:hover,
+  .formcarry-container textarea:hover,
+  .formcarry-container select:hover {
+    border-color: var(--fc-border-hover-color);
+    background-color: var(--fc-field-hover-bg-color);
+  }
+
+  .formcarry-container input:hover::placeholder,
+  .formcarry-container textarea:hover::placeholder,
+  .formcarry-container select:hover::placeholder {
+    color: var(--fc-field-hover-text-color);
+  }
+
+  .formcarry-container input:focus,
+  .formcarry-container textarea:focus,
+  .formcarry-container select:focus {
+    background-color: #EFF5F5;
+    border-color: hsl(var(--fc-primary-hsl));
+    box-shadow: hsla(var(--fc-primary-hsl), 8%) 0px 0px 0px 3px;
+    outline: none;
+  }
+
+  .formcarry-container select {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.9997 14.5001L8.46387 10.9642L9.64303 9.78589L11.9997 12.1434L14.3564 9.78589L15.5355 10.9642L11.9997 14.5001Z' fill='%236C6F93'/%3E%3C/svg%3E%0A");
+    /* background-position: calc(100% - 20px) calc(1em + 4px), calc(100% - 15px) calc(1em + 4px); */
+    background-size: 24px 24px;
+    background-position: 98%;
+    background-repeat: no-repeat;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  .formcarry-container button {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    height: 42px;
+    line-height: 40px;
+    width: 100%;
+    border-radius: 6px;
+    box-sizing: border-box;
+    border: 1px solid hsla(var(--fc-primary-hsl));
+    background-color: hsla(var(--fc-primary-hsl));
+    color: #fff;
+    cursor: pointer;
+  }                
+  
+  .formcarry-container button:hover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), hsla(var(--fc-primary-hsl));
+  }
+  
+  .formcarry-container button:focus {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), hsla(var(--fc-primary-hsl));
+    border-inline: 1px solid inline rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 0px 0px 3px rgba(var(--fc-primary-hsl), 12%);
+  }
+
+  .formcarry-container button:active {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), hsla(var(--fc-primary-hsl));
+  }
+
+  .formcarry-container button:disabled {
+    background-color: hsla(var(--fc-primary-hsl), 40%);
+    cursor: not-allowed;
+  }
+
+  .formcarry-container input:focus:required:invalid,
+  .formcarry-container input:focus:invalid, 
+  .formcarry-container select:focus:required:invalid,
+  .formcarry-container select:focus:invalid
+  {
+    color: hsl(var(--fc-error-hsl)); 
+    border-color: hsl(var(--fc-error-hsl));
+    box-shadow: 0px 0px 0px 3px hsla(var(--fc-error-hsl), 12%);
+  }
+
+  /*=====  End of Fields  ======*/
+
+/* KEYFRAMES */
+.scale-in-hor-center {
+	-webkit-animation: scale-in-hor-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-hor-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+ @-webkit-keyframes scale-in-hor-center {
+    0% {
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in-hor-center {
+    0% {
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+  
+  
+
+@media (min-width: 768px) {
+  
+    /* CSS */
+
+    /* HEADER */
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+    list-style-position: outside;
+    /* padding: 0;   */
+    gap: 0.5em;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal; 
+} 
+
+.menu>li:nth-child(2){
+    margin-top: 0;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    text-align: center;
+    border: 2px solid #00425A;
+    width: fit-content;  
+}
+.logo h1{
+    padding: 4px 16px ;
+}
+nav{
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+/* MAIN */
+main {
+    flex-direction: row;
+}
+.photo{
+    border-radius: 50px;
+    width: 50%;
+}
+
+
+/*  INTRO */
+.intro{
+    flex-direction: row;   
+    
+}
+#introduccion {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+}
+#clase {
+    margin-right: 16px;
+}
+
+/* SOMOS */
+.cont-somos{
+    flex-direction: row-reverse;
+    
+}
+.somos p{
+    width: 50%;
+    margin-right: 16px;
+   
+}
+.somos img{
+    margin-left: 16px;    
+}
+/* ELEGIRNOS */
+.elegirnos{
+    padding: 20px 32px;
+}
+
+.hidden_elements{
+    display: flex;
+    justify-content: space-between;
+}
+.hidden_elements img{
+    width: 30%;
+    height: auto;    
+}
+.hidden_elements img:first-of-type{
+    border-radius: 0px 40px 40px 40px;
+    border-left: 3px solid #FC7300;
+}
+.hidden_elements img:nth-child(2){
+    border-radius: 40px;
+    border-top: 3px solid #FC7300;
+    border-bottom: 3px solid #FC7300;
+}
+.hidden_elements img:last-of-type{
+    border-radius: 40px 40px 0px 40px;
+    border-right: 3px solid #FC7300;
+}
+/* PLAN EDUCATIVO */
+.plan{
+    padding: 20px 32px;
+}
+.plan-text-img{
+    flex-direction: row;
+}
+.plan-text-img>div:first-of-type{
+    width: 50%;
+}
+.plan_photos{
+    flex-direction: column;
+    width: 50%;
+    justify-content: space-between;
+    align-items: end;
+}
+.circular_ph{
+    width: 50%;
+}
+/* NOTICIAS */
+.noticias{
+    padding: 20px 32px;
+}
+.not-par-1, .not-par-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 16px;
+}
+
+.logo-maps{
+    align-items: center;
+}
+
+.logo_footer{
+    width: fit-content;
+}
+
+.formcarry-container{
+    width: 400px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+}
+
+@media (min-width: 1025px)  {
+  
+    /* CSS */
+nav{
+    padding-left: 160px;
+    padding-right: 160px;
+}  
+.logo{
+    margin-top: 56px;
+}  
+
+/*  INTRO */
+.intro{
+    padding-right: 160px;
+    padding-left: 160px;
+}
+#introduccion {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;   
+}
+#clase {
+    margin-right: 0;
+}
+
+/* SOMOS */
+.somos{
+    padding-right: 160px;
+    padding-left: 160px;    
+}
+.cont-somos{
+    gap: 32px;
+}
+.somos p{
+    width: 50%;
+    margin-right: 0;
+    background-color: #1F8A70;
+    padding: 24px;
+    border-radius: 40px;
+   
+}
+.somos img{
+    margin-left: 0;
+    height: 625px;
+    width: auto;   
+}
+/* ELEGIRNOS */
+.elegirnos{
+    padding: 20px 160px;
+}
+
+.plan{
+    padding: 20px 160px;
+}
+
+.noticias{
+    padding: 20px 160px;
+}
+footer{
+    padding-left: 160px;
+    padding-right: 160px;
+}
+.redes{
+    margin-left: 0;
+}
+.contacto{
+    margin-right: 0;
+}
+
+}

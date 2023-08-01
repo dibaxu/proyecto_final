@@ -2,18 +2,29 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Pedro A. Sota Taier">
+    <meta name="description" content="School Web Page">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="shortcut icon" href="./img/layout-wtf.svg" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/form.css">
 </head>
 <body>
-  <div class="logo">
-    <h1 >
-        <a href="index.html">UntrefSchool</a>
-    </h1>
-  </div>  
+  <header>
+    <nav>                
+        <ul class="menu">
+            <li><a href="index.html">UntrefSchool</a></li>            
+        </ul>
+    </nav>
+    <div class="logo scale-in-hor-center">
+        <h1 >
+            UntrefSchool
+        </h1>
+    </div>            
+    
+</header>
+   
     <section class="formcarry-container">
 
         <form action="https://formsubmit.co/psptaier@gmail.com" method="POST" enctype="multipart/form-data">
@@ -38,6 +49,32 @@
           </div>
         
         </form>
-      </section>      
+      </section>  
+      <footer>
+        <div role="complementary" class="redes">
+            <ul class="footer_text">
+                <li>Redes</li>
+                <li><a href="https://www.instagram.com/" target="_blank" rel="noopener"><i class="bi bi-instagram"></i> Instragram</a></li>
+                <li><a href="https://web.facebook.com/" target="_blank" rel="noopener"><i class="bi bi-facebook"></i> Facebook</a></li>
+                <li><a href="https://twitter.com/" target="_blank" rel="noopener"><i class="bi bi-twitter"></i> Twitter</a></li>
+                <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i> Linkedin</a></li>
+            </ul>
+        </div>
+        <div class="logo-maps">
+            <span role="banner" class="logo_footer">UntrefSchool</span>
+            
+                <div class="hidden_elements maps">
+                    <iframe title="maps-untref" loading="lazy" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Valent%C3%ADn%20G%C3%B3mez%204828%2038,%20Caseros,%20Provincia%20de%20Buenos%20Aires+(untrefSchool)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/car-satnav-gps/">Car Navigation Systems</a>
+                    </iframe>
+                </div>
+        </div>    
+        <div role="contentinfo" class="contacto">
+            <ul class="footer_text">
+                <li>Contacto</li>
+                <li><a href="mailto:untref@mail.to">untref@mail.to <i class="bi bi-envelope"></i></a></li>
+                <li><a href="tel:+54 123 123 123">+54 123 123 123 <i class="bi bi-telephone"></i></a></li>
+            </ul>
+        </div>
+    </footer>    
 </body>
 </html>
